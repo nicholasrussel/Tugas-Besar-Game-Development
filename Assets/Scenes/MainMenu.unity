@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 1259903055}
   slider: {fileID: 1349928669}
-  progressText: {fileID: 0}
+  progressText: {fileID: 1441184575}
 --- !u!4 &493712870
 Transform:
   m_ObjectHideFlags: 0
@@ -4698,7 +4698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20%
+  m_text: 100%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

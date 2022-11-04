@@ -2,12 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using TMPro;
 public class LevelLoader : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
-    public Text progressText;
+    public TextMeshProUGUI progressText;
     public void LoadLevel(int sceneIndex) {
 
         StartCoroutine(LoadAsynchronously(sceneIndex));

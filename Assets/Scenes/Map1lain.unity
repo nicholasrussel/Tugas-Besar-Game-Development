@@ -202,9 +202,9 @@ GameObject:
   - component: {fileID: 415130877}
   - component: {fileID: 415130878}
   - component: {fileID: 415130880}
-  - component: {fileID: 415130881}
+  - component: {fileID: 415130882}
   m_Layer: 0
-  m_Name: ramen1
+  m_Name: ramen1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1868949515}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &415130878
 SpriteRenderer:
@@ -303,7 +303,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25}
   m_EdgeRadius: 0
---- !u!114 &415130881
+--- !u!114 &415130882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,11 +312,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 415130876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61c971ab40b808c49b38e9056813dbf3, type: 3}
+  m_Script: {fileID: 11500000, guid: f47cf571e7089914583e0d724302dd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctForm: {fileID: 429168632}
-  wrongForm: {fileID: 1519526758}
 --- !u!1 &429168632
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +327,7 @@ GameObject:
   - component: {fileID: 429168634}
   - component: {fileID: 429168635}
   m_Layer: 0
-  m_Name: restoranramen1
+  m_Name: ramen1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +407,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429168632}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dcb992baec538e4eaa81c96c1afd2d9, type: 3}
   m_Name: 
@@ -5093,6 +5091,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &858175666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858175668}
+  - component: {fileID: 858175667}
+  - component: {fileID: 858175669}
+  m_Layer: 0
+  m_Name: SnapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &858175667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858175666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246b479b090174442890bc5759e74e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &858175668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858175666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 344.66373, y: 162.64847, z: -0.14659505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858175669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858175666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcb992baec538e4eaa81c96c1afd2d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapPoints:
+  - {fileID: 429168633}
+  - {fileID: 1519526759}
+  draggableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  snapRange: 0.5
 --- !u!1 &973406653
 GameObject:
   m_ObjectHideFlags: 0
@@ -19715,7 +19783,7 @@ GameObject:
   - component: {fileID: 1519526760}
   - component: {fileID: 1519526761}
   m_Layer: 0
-  m_Name: restoranramen2
+  m_Name: ramen2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19795,7 +19863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519526758}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dcb992baec538e4eaa81c96c1afd2d9, type: 3}
   m_Name: 
@@ -19980,8 +20048,8 @@ Transform:
   - {fileID: 429168633}
   - {fileID: 1519526759}
   - {fileID: 735582496}
-  - {fileID: 415130877}
   - {fileID: 1943796881}
+  - {fileID: 415130877}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20099,9 +20167,9 @@ GameObject:
   - component: {fileID: 1943796881}
   - component: {fileID: 1943796882}
   - component: {fileID: 1943796884}
-  - component: {fileID: 1943796885}
+  - component: {fileID: 1943796886}
   m_Layer: 0
-  m_Name: ramen2
+  m_Name: ramen2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20116,11 +20184,11 @@ Transform:
   m_GameObject: {fileID: 1943796880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 349.72, y: 156.51, z: 0}
-  m_LocalScale: {x: 1.6453, y: 1.6453, z: 1.6453001}
+  m_LocalScale: {x: 1.6453, y: 1.6453, z: 1.6453}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1868949515}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1943796882
 SpriteRenderer:
@@ -20162,7 +20230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 42bc7f4d893266f4784bafae30b741ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20200,7 +20268,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.56, y: 1.57}
   m_EdgeRadius: 0
---- !u!114 &1943796885
+--- !u!114 &1943796886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20209,11 +20277,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943796880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61c971ab40b808c49b38e9056813dbf3, type: 3}
+  m_Script: {fileID: 11500000, guid: f47cf571e7089914583e0d724302dd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctForm: {fileID: 1519526758}
-  wrongForm: {fileID: 429168632}
 --- !u!1 &2035688544
 GameObject:
   m_ObjectHideFlags: 0
@@ -20249,7 +20315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -139}
+  m_AnchoredPosition: {x: -240, y: -163}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035688547
