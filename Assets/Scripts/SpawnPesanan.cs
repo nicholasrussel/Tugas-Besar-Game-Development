@@ -21,7 +21,7 @@ public class SpawnPesanan : MonoBehaviour
 
     void SpawnRandomPesanan()
     {
-        int diamondIndex = Random.Range(0, pesananPrefabs.Length);
-        Instantiate(pesananPrefabs[diamondIndex], pesananPrefabs[diamondIndex].transform.position, Quaternion.identity);
+        int pesananIndex = Random.Range(0, pesananPrefabs.Length);
+        Instantiate(pesananPrefabs[pesananIndex], pesananPrefabs[pesananIndex].transform.position, Quaternion.identity);
     }
 }
