@@ -6,7 +6,7 @@ public class StarsHandler : MonoBehaviour
 {
 
     public GameObject[] starPrefabs;
-    private float coinsCollected = 2;
+    private float coinsCollected = 4;
     private float coinsTotal = 4;
     // private float startDelay = 3;
     // private float spawnInterval = 6.0f;
