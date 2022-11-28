@@ -7,6 +7,7 @@ public class MoveSystem : MonoBehaviour
     public GameObject correctForm;
 
     public GameObject wrongForm;
+    public GameObject posisiPrefabsForm;
     private bool moving;
     private bool finish;
     private Vector3 resetPosition;
@@ -106,6 +107,7 @@ public class MoveSystem : MonoBehaviour
         int sumbuX = (int) koordinatMouse.x;
         var koordinatGambarBenar = correctForm.transform.position;
         var koordinatGambarSalah = wrongForm.transform.position;
+        var koordinatGambarPrefab = posisiPrefabsForm.transform.position;
         int sumbuXGambarBenar = (int) koordinatGambarBenar.x;
         int sumbuXGambarSalah = (int) koordinatGambarSalah.x;
       

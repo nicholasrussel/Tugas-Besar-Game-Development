@@ -126,3 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctForm: {fileID: 3701343768537386789, guid: 967d0084081cb6c479345deda643b3bc, type: 3}
   wrongForm: {fileID: 5602092565230533098, guid: b7b072e7cff5e884eb138cbafc157b4f, type: 3}
+  posisiPrefabsForm: {fileID: 1206214455560938635}
