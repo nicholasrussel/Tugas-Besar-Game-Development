@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     public float SubtractPoint(){
-        score--;
+        score++;
         scoreText.text = score.ToString() + " " + "points";
         Debug.Log("Skor kurang saat ini = " + score);
         return score;

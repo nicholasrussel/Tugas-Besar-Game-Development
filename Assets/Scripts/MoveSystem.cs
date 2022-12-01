@@ -124,11 +124,11 @@ public class MoveSystem : MonoBehaviour
             if(sumbuX == sumbuXGambarBenar){
                 Debug.Log("gambar benar");
                 finish = true;
-                float scoreGet = ScoreManager.instance.AddPoint();
+                float scoreTambah = ScoreManager.instance.AddPoint();
             } else if(sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;
-                float scoreGet = ScoreManager.instance.SubtractPoint();
+                float scoreKurang = ScoreManager.instance.SubtractPoint();
             }
 
         }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
