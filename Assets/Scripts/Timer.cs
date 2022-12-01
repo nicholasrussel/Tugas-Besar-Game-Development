@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     float currentTime;
@@ -42,6 +43,7 @@ public class Timer : MonoBehaviour
 
             Debug.Log("Game Selesai");
             //Nanti Ganti ke Win UI - Ed
+            SceneManager.LoadScene("MapWinMenu");
             GameActive = false;
         }
 

@@ -124,6 +124,8 @@ public class MoveSystem : MonoBehaviour
             if(sumbuX == sumbuXGambarBenar){
                 Debug.Log("gambar benar");
                 finish = true;
+                float scoreGet = ScoreManager.instance.AddPoint();
+                StarsHandler.instance.SpawnStar();
             } else if(sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;

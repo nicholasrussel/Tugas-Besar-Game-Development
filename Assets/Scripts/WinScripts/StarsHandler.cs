@@ -6,30 +6,32 @@ public class StarsHandler : MonoBehaviour
 {
 
     public GameObject[] starPrefabs;
-    private float coinsCollected = 4;
-    private float coinsTotal = 4;
+    public float pointsCollected = 0;
+    public float pointsTotal = 14;
     // private float startDelay = 3;
     // private float spawnInterval = 6.0f;
     // Start is called before the first frame update
-    void Start()
-    {
-        // InvokeRepeating("SpawnRandomStar", startDelay, spawnInterval);
-        SpawnStar();
+    
+    public static StarsHandler instance;
+
+     private void Awake(){
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private float countPercentStar(float pointsCountCollected, float pointsCountTotal)
     {
-
+        float percent = (pointsCountCollected / pointsCountTotal) * 100.0f;
+        Debug.Log("Points get = " + pointsCountCollected);
+        Debug.Log("Points total = " + pointsCountTotal);
+        return percent;
     }
-
-    void SpawnStar()
+    public void SpawnStar()
     {
         // int diamondIndex = Random.Range(0, diamondPrefabs.Length);
         // Instantiate(diamondPrefabs[diamondIndex], diamondPrefabs[diamondIndex].transform.position, Quaternion.identity);
-
-        float percentStar = countPercentStar(coinsCollected, coinsTotal);
-
+        float scoreGet = ScoreManager.instance.AddPoint();
+        float percentStar = countPercentStar(scoreGet, pointsTotal);
+        Debug.Log("Hasil Persen" +" = "+ percentStar);
         if (percentStar <= 25.0f)
         {
             Instantiate(starPrefabs[0], starPrefabs[0].transform.position, Quaternion.identity);
@@ -54,9 +56,10 @@ public class StarsHandler : MonoBehaviour
         }
     }
 
-    private float countPercentStar(float coinsCollected, float coinsTotal)
+    void Start()
     {
-        float percent = (coinsCollected / coinsTotal) * 100.0f;
-        return percent;
+        // InvokeRepeating("SpawnRandomStar", startDelay, spawnInterval);
+        SpawnStar();
     }
+    
 }
