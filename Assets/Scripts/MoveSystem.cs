@@ -125,10 +125,10 @@ public class MoveSystem : MonoBehaviour
                 Debug.Log("gambar benar");
                 finish = true;
                 float scoreGet = ScoreManager.instance.AddPoint();
-                StarsHandler.instance.SpawnStar();
             } else if(sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;
+                float scoreGet = ScoreManager.instance.SubtractPoint();
             }
 
         }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
@@ -139,5 +139,7 @@ public class MoveSystem : MonoBehaviour
             Debug.Log("if ke 2");
             this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
         }
+
+        StarsHandler.instance.SpawnStar();
     }
 }

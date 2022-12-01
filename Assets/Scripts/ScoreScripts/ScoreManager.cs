@@ -23,7 +23,14 @@ public class ScoreManager : MonoBehaviour
     public float AddPoint(){
         score++;
         scoreText.text = score.ToString() + " " + "points";
-        Debug.Log("Skor saat ini = " + score);
+        Debug.Log("Skor tambah saat ini = " + score);
+        return score;
+    }
+
+    public float SubtractPoint(){
+        score--;
+        scoreText.text = score.ToString() + " " + "points";
+        Debug.Log("Skor kurang saat ini = " + score);
         return score;
     }
 }

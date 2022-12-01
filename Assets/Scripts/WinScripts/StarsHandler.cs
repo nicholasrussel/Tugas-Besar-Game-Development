@@ -30,7 +30,9 @@ public class StarsHandler : MonoBehaviour
         // int diamondIndex = Random.Range(0, diamondPrefabs.Length);
         // Instantiate(diamondPrefabs[diamondIndex], diamondPrefabs[diamondIndex].transform.position, Quaternion.identity);
         float scoreGet = ScoreManager.instance.AddPoint();
-        float percentStar = countPercentStar(scoreGet, pointsTotal);
+        float scoreLess = ScoreManager.instance.SubtractPoint();
+        float score = scoreGet - scoreLess;
+        float percentStar = countPercentStar(score, pointsTotal);
         Debug.Log("Hasil Persen" +" = "+ percentStar);
         if (percentStar <= 25.0f)
         {
