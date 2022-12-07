@@ -51,7 +51,12 @@ public class Timer : MonoBehaviour
             Time.timeScale = 0;
             numberOfUnlockedLevels = PlayerPrefs.GetInt("levelsUnlocked");
             Debug.Log(numberOfUnlockedLevels);
-            PlayerPrefs.SetInt("levelsUnlocked", numberOfUnlockedLevels + 1);
+        {
+            if (numberOfUnlockedLevels <= levelToUnlock)
+            {
+                PlayerPrefs.SetInt("levelsUnlocked", numberOfUnlockedLevels + 1);
+            }
+        }
             Debug.Log(numberOfUnlockedLevels + "level 2 kebuka");
             SceneManager.LoadScene("MapWinMenu");
         }
