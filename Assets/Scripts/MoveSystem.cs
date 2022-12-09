@@ -55,62 +55,14 @@ public class MoveSystem : MonoBehaviour
     private void OnMouseUp()
     {
         moving = false;
-
-        // if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 5f &&
-        //    Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 5f)
-        // {
-        //     Debug.Log(this.gameObject.name);
-        //     Debug.Log(correctForm.gameObject.name);
-        //     Debug.Log("if ke 1");
-        //     this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
-        //     if(this.gameObject.name == correctForm.gameObject.name){
-        //         Debug.Log("if if ke 1");
-        //         finish = true;
-        //     } else {
-        //         Debug.Log("if if ke 2");
-        //         finish = true;
-        //     }
-
-        // }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
-        //    Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 100f){
-        //     Debug.Log("if ke 2");
-        //     this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
-        // }
-        // if (Mathf.Abs(this.transform.localPosition.x - wrongForm.transform.localPosition.x) <= 0.5f &&
-        //    Mathf.Abs(this.transform.localPosition.y - wrongForm.transform.localPosition.y) <= 0.5f && 
-        //    this.gameObject.name == correctForm.gameObject.name){
-
-        //     Debug.Log(this.gameObject.name);
-        //     Debug.Log(wrongForm.gameObject.name);
-        //     Debug.Log("if ke 3");
-        //     this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
-
-        // }else if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 0.5f &&
-        //    Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 0.5f && 
-        //    this.gameObject.name == wrongForm.gameObject.name)
-        // {
-        //     Debug.Log(this.gameObject.name);
-        //     Debug.Log(correctForm.gameObject.name);
-        //     Debug.Log("if ke 1");
-        //     this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
-
-        // }
-
-        // if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
-        //    Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 100f){
-
-        //     Debug.Log("if ke 2");
-        //     this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
-
-        // }
         var koordinatMouse = this.transform.position;
-        int sumbuX = (int) koordinatMouse.x;
+        int sumbuX = (int)koordinatMouse.x;
         var koordinatGambarBenar = correctForm.transform.position;
         var koordinatGambarSalah = wrongForm.transform.position;
         var koordinatGambarPrefab = posisiPrefabsForm.transform.position;
-        int sumbuXGambarBenar = (int) koordinatGambarBenar.x;
-        int sumbuXGambarSalah = (int) koordinatGambarSalah.x;
-      
+        int sumbuXGambarBenar = (int)koordinatGambarBenar.x;
+        int sumbuXGambarSalah = (int)koordinatGambarSalah.x;
+
 
         if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 5f &&
            Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 5f)
@@ -121,18 +73,22 @@ public class MoveSystem : MonoBehaviour
             Debug.Log(sumbuXGambarSalah);
             Debug.Log("if ke 1");
             this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
-            if(sumbuX == sumbuXGambarBenar){
+            if (sumbuX == sumbuXGambarBenar)
+            {
                 Debug.Log("gambar benar");
                 finish = true;
                 float scoreTambah = ScoreManager.instance.AddPoint();
-            } else if(sumbuX == sumbuXGambarSalah){
+            }
+            else if (sumbuX == sumbuXGambarSalah)
+            {
                 Debug.Log("gambar salah");
                 finish = true;
-                float scoreKurang = ScoreManager.instance.SubtractPoint();
             }
 
-        }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
-           Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 100f){
+        }
+        else if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 100f &&
+           Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 100f)
+        {
             Debug.Log(sumbuX);
             Debug.Log(sumbuXGambarBenar);
             Debug.Log(sumbuXGambarSalah);

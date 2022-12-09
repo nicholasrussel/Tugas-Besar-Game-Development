@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 159424b170558dc42b183f9b3e33e0c9
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
+    path: Assets/Scenes/MapCobaSpawn.unity
     guid: 7e44fcccefc304f4c82f7a3b6e3e7037
+  - enabled: 1
+    path: Assets/Scenes/MapWinMenu.unity
+    guid: 75102a311b077f84ba51238c23ecaad4
   m_configObjects: {}

@@ -7,14 +7,11 @@ public class StarsHandler : MonoBehaviour
 
     public GameObject[] starPrefabs;
     public float pointsCollected = 0;
-    public float pointsTotal = 14;
-    // private float startDelay = 3;
-    // private float spawnInterval = 6.0f;
-    // Start is called before the first frame update
-    
+    private float pointsTotal = SpawnPesanan.instance.numberOfClone;
     public static StarsHandler instance;
 
-     private void Awake(){
+    private void Awake()
+    {
         instance = this;
     }
 
@@ -27,13 +24,9 @@ public class StarsHandler : MonoBehaviour
     }
     public void SpawnStar()
     {
-        // int diamondIndex = Random.Range(0, diamondPrefabs.Length);
-        // Instantiate(diamondPrefabs[diamondIndex], diamondPrefabs[diamondIndex].transform.position, Quaternion.identity);
-        float scoreGet = ScoreManager.instance.AddPoint();
-        float scoreLess = ScoreManager.instance.SubtractPoint();
-        float scoreResult = scoreGet - scoreLess;
-        float percentStar = countPercentStar(scoreResult, pointsTotal);
-        Debug.Log("Hasil Persen" +" = "+ percentStar);
+        float scoreGet = ScoreManager.instance.AddPoint() + AddManager.instance.PowerUp() - SubstractManager.instance.PowerDown();
+        float percentStar = countPercentStar(scoreGet, pointsTotal);
+        Debug.Log("Hasil Persen" + " = " + percentStar);
         if (percentStar <= 25.0f)
         {
             Instantiate(starPrefabs[0], starPrefabs[0].transform.position, Quaternion.identity);
@@ -60,8 +53,7 @@ public class StarsHandler : MonoBehaviour
 
     void Start()
     {
-        // InvokeRepeating("SpawnRandomStar", startDelay, spawnInterval);
         SpawnStar();
     }
-    
+
 }
