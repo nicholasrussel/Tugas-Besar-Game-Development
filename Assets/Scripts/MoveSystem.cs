@@ -13,6 +13,7 @@ public class MoveSystem : MonoBehaviour
     private Vector3 resetPosition;
     private float startPosX;
     private float startPosY;
+    public GameObject coinPrefab;
 
     void Start()
     {
@@ -62,6 +63,9 @@ public class MoveSystem : MonoBehaviour
         var koordinatGambarBenar = correctForm.transform.position;
         var koordinatGambarSalah = wrongForm.transform.position;
         var koordinatGambarPrefab = posisiPrefabsForm.transform.position;
+        int sumbuXPrefabCoin = (int) koordinatGambarPrefab.x;
+        int sumbuYPrefabCoin = (int) koordinatGambarPrefab.y;
+        int sumbuZPrefabCoin = (int) koordinatGambarPrefab.z;
         int sumbuXGambarBenar = (int) koordinatGambarBenar.x;
         int sumbuXGambarSalah = (int) koordinatGambarSalah.x;
         int sumbuYGambarBenar = (int) koordinatGambarBenar.y;
@@ -79,18 +83,20 @@ public class MoveSystem : MonoBehaviour
             this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
             int selisih = sumbuXGambarBenar-sumbuX;
             int selisihSalah = sumbuXGambarSalah-sumbuX;
-            if(((sumbuXGambarBenar-7) <= sumbuX && sumbuX  <= (sumbuXGambarBenar+7)) &&((sumbuYGambarBenar-7) <= sumbuY && sumbuY  <= (sumbuYGambarBenar+7)) || sumbuX == sumbuXGambarBenar){
+            if(((sumbuXGambarBenar-5) <= sumbuX && sumbuX  <= (sumbuXGambarBenar+5)) &&((sumbuYGambarBenar-5) <= sumbuY && sumbuY  <= (sumbuYGambarBenar+5)) || sumbuX == sumbuXGambarBenar){
                 Debug.Log("gambar benar");
                 finish = true;
+                Vector3 randomPos = new Vector3(resetPosition.x,((resetPosition.y)-3), resetPosition.z);
+                Instantiate(coinPrefab, randomPos, Quaternion.identity);
                 float scoreGet = ScoreManager.instance.AddPoint();
-            } else if(((sumbuXGambarSalah-7) <= sumbuX &&  sumbuX  <= (sumbuXGambarSalah+7)) &&((sumbuYGambarSalah-7) <= sumbuY &&  sumbuY  <= (sumbuYGambarSalah+7)) || sumbuX == sumbuXGambarSalah){
+            } else if(((sumbuXGambarSalah-5) <= sumbuX &&  sumbuX  <= (sumbuXGambarSalah+5)) &&((sumbuYGambarSalah-5) <= sumbuY &&  sumbuY  <= (sumbuYGambarSalah+5)) || sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;
-                 float scoreGet = ScoreManager.instance.SubtractPoint();
+                float scoreGet = ScoreManager.instance.SubtractPoint();
             }
 
         }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1000f &&
-           Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 1000f){
+            Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 1000f){
             Debug.Log(sumbuX);
             Debug.Log(sumbuXGambarBenar);
             Debug.Log(sumbuXGambarSalah);

@@ -6,22 +6,24 @@ public class SpawnPesanan : MonoBehaviour
 {
     public GameObject[] pesananPrefabs;
     private float startDelay = 2;
-    private float spawnInterval = 5f;
-    // Start is called before the first frame update
+    private float spawnInterval = 2f;
+    public float numberOfClone = 0;
+
+    public static SpawnPesanan instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         InvokeRepeating("SpawnRandomPesanan", startDelay, spawnInterval);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void SpawnRandomPesanan()
     {
         int pesananIndex = Random.Range(0, pesananPrefabs.Length);
         Instantiate(pesananPrefabs[pesananIndex], pesananPrefabs[pesananIndex].transform.position, Quaternion.identity);
+        numberOfClone++;
     }
 }

@@ -7,7 +7,7 @@ public class StarsHandler : MonoBehaviour
 
  public GameObject[] starPrefabs;
     public float pointsCollected = 0;
-    
+    private float pointsTotal = SpawnPesanan.instance.numberOfClone;
     public static StarsHandler instance;
      private void Awake(){
         instance = this;
@@ -20,11 +20,11 @@ public class StarsHandler : MonoBehaviour
     }
     public void SpawnStar()
     {
-        
-        float scoreGet = ScoreManager.instance.AddPoint();
-        float scoreLess = ScoreManager.instance.SubtractPoint();
-        float totalPesanan = scoreGet + scoreLess;
-        float percentStar = countPercentStar(scoreGet, totalPesanan);
+        float scoreGet = ScoreManager.instance.AddPoint() - ScoreManager.instance.SubtractPoint() + AddManager.instance.PowerUp() - SubstractManager.instance.PowerDown();
+        // float pesananBenar = ScoreManager.instance.AddPoint();
+        // float pesananSalah = ScoreManager.instance.SubtractPoint();
+        // float totalPesanan = pesananBenar + pesananSalah;
+        float percentStar = countPercentStar(scoreGet, pointsTotal);
         if (percentStar <= 25.0f)
         {
             Instantiate(starPrefabs[0], starPrefabs[0].transform.position, Quaternion.identity);
