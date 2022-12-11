@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MapWinMenuComingSoon.unity
+    guid: 937d008e73fb96346b4c6856a1d76376
+  - enabled: 1
+    path: Assets/Scenes/ComingSoon.unity
+    guid: 6f21a855f5849ce4e806dd8721a465ce
   m_configObjects: {}

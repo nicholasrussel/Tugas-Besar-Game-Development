@@ -83,13 +83,13 @@ public class MoveSystem : MonoBehaviour
             this.transform.position = new Vector3(correctForm.transform.position.x, correctForm.transform.position.y, correctForm.transform.position.z);
             int selisih = sumbuXGambarBenar-sumbuX;
             int selisihSalah = sumbuXGambarSalah-sumbuX;
-            if(((sumbuXGambarBenar-5) <= sumbuX && sumbuX  <= (sumbuXGambarBenar+5)) &&((sumbuYGambarBenar-5) <= sumbuY && sumbuY  <= (sumbuYGambarBenar+5)) || sumbuX == sumbuXGambarBenar){
+            if(((sumbuXGambarBenar-3) <= sumbuX && sumbuX  <= (sumbuXGambarBenar+3)) &&((sumbuYGambarBenar-3) <= sumbuY && sumbuY  <= (sumbuYGambarBenar+3)) || sumbuX == sumbuXGambarBenar){
                 Debug.Log("gambar benar");
                 finish = true;
                 Vector3 randomPos = new Vector3(resetPosition.x,((resetPosition.y)-3), resetPosition.z);
                 Instantiate(coinPrefab, randomPos, Quaternion.identity);
                 float scoreAdd = ScoreManager.instance.AddPoint();
-            } else if(((sumbuXGambarSalah-5) <= sumbuX &&  sumbuX  <= (sumbuXGambarSalah+5)) &&((sumbuYGambarSalah-5) <= sumbuY &&  sumbuY  <= (sumbuYGambarSalah+5)) || sumbuX == sumbuXGambarSalah){
+            } else if(((sumbuXGambarSalah-3) <= sumbuX &&  sumbuX  <= (sumbuXGambarSalah+3)) &&((sumbuYGambarSalah-3) <= sumbuY &&  sumbuY  <= (sumbuYGambarSalah+3)) || sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;
                 float scoreSubstract = ScoreManager.instance.SubtractPoint();

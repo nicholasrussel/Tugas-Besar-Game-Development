@@ -14,9 +14,12 @@ public class Timer : MonoBehaviour
     public int levelToUnlock;
     int numberOfUnlockedLevels;
 
+    private Scene sceneSekarang;
+
     void Start()
     {
         currentTime = startingTime;
+        sceneSekarang = SceneManager.GetActiveScene();
     }
     void SetText()
     {
