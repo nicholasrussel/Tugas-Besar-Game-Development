@@ -88,11 +88,11 @@ public class MoveSystem : MonoBehaviour
                 finish = true;
                 Vector3 randomPos = new Vector3(resetPosition.x,((resetPosition.y)-3), resetPosition.z);
                 Instantiate(coinPrefab, randomPos, Quaternion.identity);
-                float scoreGet = ScoreManager.instance.AddPoint();
+                float scoreAdd = ScoreManager.instance.AddPoint();
             } else if(((sumbuXGambarSalah-5) <= sumbuX &&  sumbuX  <= (sumbuXGambarSalah+5)) &&((sumbuYGambarSalah-5) <= sumbuY &&  sumbuY  <= (sumbuYGambarSalah+5)) || sumbuX == sumbuXGambarSalah){
                 Debug.Log("gambar salah");
                 finish = true;
-                float scoreGet = ScoreManager.instance.SubtractPoint();
+                float scoreSubstract = ScoreManager.instance.SubtractPoint();
             }
 
         }else if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1000f &&

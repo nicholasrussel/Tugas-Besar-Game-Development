@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9166231768576162380
+--- !u!1 &5161719605389906219
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6524701231408574584}
-  - component: {fileID: 2814004199920709908}
-  - component: {fileID: 114466565707589004}
-  - component: {fileID: 4762261869146971389}
-  - component: {fileID: 6326019332258101625}
+  - component: {fileID: 5161719605389906198}
+  - component: {fileID: 5161719605389906199}
+  - component: {fileID: 5161719605389906196}
+  - component: {fileID: 5161719605389906197}
+  - component: {fileID: 5161719605389906218}
   m_Layer: 0
-  m_Name: PowerDownTwo
+  m_Name: PowerUpMapDua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6524701231408574584
+--- !u!4 &5161719605389906198
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166231768576162380}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 367.65, y: 172.64, z: 0}
-  m_LocalScale: {x: 12.500161, y: 12.007458, z: 1}
+  m_GameObject: {fileID: 5161719605389906219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24, y: 12, z: 0}
+  m_LocalScale: {x: 14, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2814004199920709908
+--- !u!212 &5161719605389906199
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166231768576162380}
+  m_GameObject: {fileID: 5161719605389906219}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15fd679098c39bd4890d7e0cd1d49d15, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: cfb9534e88f2cca4f998d9620eccbdf9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,13 +87,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &114466565707589004
+--- !u!114 &5161719605389906196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161719605389906219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2ccb4064e3c4f49b8fb3afea469949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultAdd: 0
+--- !u!60 &5161719605389906197
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166231768576162380}
+  m_GameObject: {fileID: 5161719605389906219}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -117,14 +130,14 @@ PolygonCollider2D:
       - {x: 0.08, y: 0}
       - {x: 0.08, y: 0.19}
       - {x: 0.06, y: 0.19999999}
---- !u!50 &4762261869146971389
+--- !u!50 &5161719605389906218
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166231768576162380}
+  m_GameObject: {fileID: 5161719605389906219}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -138,15 +151,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6326019332258101625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166231768576162380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab6279c8db5750418b1b1564e28b04e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

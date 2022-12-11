@@ -16,14 +16,13 @@ public class StarsHandler : MonoBehaviour
     private float countPercentStar(float pointsCountCollected, float pointsCountTotal)
     {
         float percent = (pointsCountCollected / pointsCountTotal) * 100.0f;
+        Debug.Log("Point dapat total = " +pointsCountCollected);
+        Debug.Log("Total pesanan = " +pointsCountTotal);
         return percent;
     }
     public void SpawnStar()
     {
         float scoreGet = ScoreManager.instance.AddPoint() - ScoreManager.instance.SubtractPoint() + AddManager.instance.PowerUp() - SubstractManager.instance.PowerDown();
-        // float pesananBenar = ScoreManager.instance.AddPoint();
-        // float pesananSalah = ScoreManager.instance.SubtractPoint();
-        // float totalPesanan = pesananBenar + pesananSalah;
         float percentStar = countPercentStar(scoreGet, pointsTotal);
         if (percentStar <= 25.0f)
         {

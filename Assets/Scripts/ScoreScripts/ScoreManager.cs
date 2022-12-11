@@ -26,12 +26,14 @@ public class ScoreManager : MonoBehaviour
     public float AddPoint(){
         scoreTambah++;
         scoreText.text = scoreTambah.ToString();
+        Debug.Log("Point tambah sekarang = " +scoreTambah);
         return scoreTambah;
     }
 
     public float SubtractPoint(){
         scoreKurang++;
         scoreTextKurang.text = scoreKurang.ToString();
+        Debug.Log("Point kurang sekarang = " +scoreKurang);
         return scoreKurang;
     }
 }
