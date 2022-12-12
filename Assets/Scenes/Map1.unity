@@ -24317,7 +24317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdbcf445ba9f2a4cbb04ef75b74e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 20
+  startingTime: 30
   textDisplay: {fileID: 0}
   countdownText: {fileID: 2035688547}
   GameActive: 1
