@@ -15,13 +15,13 @@ public class SubstractManager : MonoBehaviour
     }
     void Start()
     {
-        substractText.text = substract.ToString() + " " + "points";
+        substractText.text = substract.ToString();
     }
 
     public float PowerDown()
     {
         substract++;
-        substractText.text = substract.ToString() + " " + "points";
+        substractText.text = substract.ToString();
         Debug.Log("PowerDown saat ini = " + substract);
         return substract;
     }
