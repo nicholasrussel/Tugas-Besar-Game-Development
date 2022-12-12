@@ -15,13 +15,13 @@ public class AddManager : MonoBehaviour
     }
     void Start()
     {
-        addText.text = add.ToString() + " " + "points";
+        addText.text = add.ToString();
     }
 
     public float PowerUp()
     {
         add++;
-        addText.text = add.ToString() + " " + "points";
+        addText.text = add.ToString();
         Debug.Log("Powerup saat ini = " + add);
         return add;
     }
